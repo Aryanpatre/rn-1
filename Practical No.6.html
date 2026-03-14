@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Registration</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .form-container { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 400px; margin: auto; }
+        h2 { text-align: center; color: #333; }
+        fieldset { border: 2px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+        legend { font-weight: bold; color: #555; }
+        label { display: block; margin-bottom: 10px; font-size: 14px; }
+        input[type="text"], input[type="email"], select { width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc; }
+        .radio-group, .checkbox-group { display: flex; flex-direction: column; }
+        input[type="submit"] { background: #4CAF50; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; width: 100%; }
+        input[type="submit"]:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Scholarship Registration</h2>
+        <form action="" method="POST">
+            <fieldset>
+                <legend>Personal Info</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="dob">Date of Birth:</label>
+                <input type="text" id="dob" name="dob" placeholder="YYYY-MM-DD" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>College Info</legend>
+                <label for="college">Select Your College:</label>
+                <select id="college" name="college" required>
+                    <option value="" disabled selected>Select a College</option>
+                    <option value="SB Jain Institute">S.B. Jain Institute of Technology, Management and Research, Nagpur</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Eligibility</legend>
+                <div class="radio-group">
+                    <label><input type="radio" name="eligibility" value="yes" required> Yes</label>
+                    <label><input type="radio" name="eligibility" value="no"> No</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Info</legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="terms" required> I agree to the terms</label>
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Submit Registration">
+        </form>
+    </div>
+</body>
+</html>
